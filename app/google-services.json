@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1045247426925",
+    "firebase_url": "https://howoldami-fb391.firebaseio.com",
+    "project_id": "howoldami-fb391",
+    "storage_bucket": "howoldami-fb391.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1045247426925:android:7aa7874fd247055a",
+        "android_client_info": {
+          "package_name": "fatty.howoldami"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1045247426925-kiaveqjm5t8ov9isu67kvsig4uakpa07.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "fatty.howoldami",
+            "certificate_hash": "A61F070255A62EACC6D035656177FBA77478A17F"
+          }
+        },
+        {
+          "client_id": "1045247426925-k59p0leole8pkrab8fm155ctpu7ckjf4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBArQe9JxUW3hqbrAt1gMPgBg48CPDI9QA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1045247426925-k59p0leole8pkrab8fm155ctpu7ckjf4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#111111</color>
+    <color name="colorPrimary">#222222</color>
+    <color name="calenderColor">#282828</color>
+    <color name="buttonColor">#757575</color>
+    <color name="colorAccent">#757575</color>
+
+
+
+</resources>
