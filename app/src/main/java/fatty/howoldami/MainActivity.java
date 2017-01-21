@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         Button enterButton = (Button) findViewById(R.id.enterButton);
         enterButton.setOnClickListener(buttonClickedLister);
 
+        ImageView bg3mao = (ImageView) findViewById(R.id.bg3mao);
+        bg3mao.setVisibility(View.INVISIBLE);
+
         mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -35,12 +39,15 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View v) {
 
             Button enterButton = (Button) findViewById(R.id.enterButton);
+            ImageView bg3mao = (ImageView) findViewById(R.id.bg3mao);
 
             if (formatEditTextContext()) {
-                enterButton.setText("確定");
+                bg3mao.setVisibility(View.INVISIBLE);
+                enterButton.setText(R.string.normalEnter);
                 calDateDiff();
             }else {
-                enterButton.setText("Date Error/確定");
+                enterButton.setText(R.string.errorEnter);
+                bg3mao.setVisibility(View.VISIBLE);
             }
         }
     };
@@ -58,12 +65,6 @@ public class MainActivity extends AppCompatActivity {
             Date date = null;
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd HHmmss");
 
-            try {
-                date = dateFormat.parse(enterYear.getText().toString() + enterMonth.getText().toString() + enterDate.getText().toString() + " " + "000000");
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
-
             if (enterYear.getText().toString().length() < 4) {
                 for (int i = 0; i < 4 - enterYear.getText().toString().length(); i++)
                     temp += "0";
@@ -76,6 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 enterDate.setText("0" + enterDate.getText().toString());
             }
 
+            date = dateFormat.parse(enterYear.getText().toString() + enterMonth.getText().toString() + enterDate.getText().toString() + " " + "000000");
+
             if (date.before(now)
                     &&
                     (Integer.valueOf(enterMonth.getText().toString()) >= 1 &&
@@ -85,11 +88,13 @@ public class MainActivity extends AppCompatActivity {
                             Integer.valueOf(enterDate.getText().toString()) <= calMonthDays(Integer.valueOf(enterYear.getText().toString()), Integer.valueOf(enterMonth.getText().toString())))
                     ) {
             } else {
+                printText("X","X","X","X","X","X","X","X","X","X");
                 return false;
             }
             return true;
 
         } catch (Exception ex){
+            printText("X","X","X","X","X","X","X","X","X","X");
             return false;
         }
     }
@@ -99,18 +104,6 @@ public class MainActivity extends AppCompatActivity {
         EditText enterYear = (EditText) findViewById(R.id.yearTextFields);
         EditText enterMonth = (EditText) findViewById(R.id.monthTextField);
         EditText enterDate = (EditText) findViewById(R.id.dateTextField);
-
-        TextView howOldTextYears = (TextView) findViewById(R.id.howOldAmIYear);
-        TextView howOldTextMonths = (TextView) findViewById(R.id.howOldAmIMonth);
-        TextView howOldTextDate = (TextView) findViewById(R.id.howOldAmIDate);
-
-        TextView textTotalYears = (TextView) findViewById(R.id.textTotalYears);
-        TextView textTotalMonths = (TextView) findViewById(R.id.textTotalMonths);
-        TextView textTotalWeeks = (TextView) findViewById(R.id.textTotalWeeks);
-        TextView textTotalDayss = (TextView) findViewById(R.id.textTotalDays);
-        TextView textTotalHours = (TextView) findViewById(R.id.textTotalHours);
-        TextView textTotalMinutes = (TextView) findViewById(R.id.textTotalMinutes);
-        TextView textTotalSeconds = (TextView) findViewById(R.id.textTotalSeconds);
 
         long howOldYear = 0;
         long howOldMonth = 0;
@@ -164,17 +157,7 @@ public class MainActivity extends AppCompatActivity {
         day = (long) Math.floor(hour / 24);
         week = (long) Math.floor(day / 7);
 
-        textTotalYears.setText("          " + howOldYear);
-        textTotalMonths.setText("          " + (howOldYear*12 + howOldMonth));
-        textTotalWeeks.setText("          " + week);
-        textTotalDayss.setText("          " + day);
-        textTotalHours.setText("          " + hour);
-        textTotalMinutes.setText("          " + min);
-        textTotalSeconds.setText("          " + sec);
-
-        howOldTextYears.setText("" + howOldYear);
-        howOldTextMonths.setText("" + howOldMonth);
-        howOldTextDate.setText("" + howOldDate);
+        printText(""+howOldYear,""+howOldMonth,""+howOldDate,""+howOldYear,""+(howOldYear*12 + howOldMonth),""+week,""+day,""+hour,""+min,""+sec);
     }
     private int calMonthDays(int year , int month){
 
@@ -204,5 +187,31 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return 0;
         }
+    }
+
+    private void printText(String howOldYear,String howOldMonth,String howOldDate,String Year,String Month,String week,String day,String hour,String min,String sec){
+
+        TextView textTotalYears = (TextView) findViewById(R.id.textTotalYears);
+        TextView textTotalMonths = (TextView) findViewById(R.id.textTotalMonths);
+        TextView textTotalWeeks = (TextView) findViewById(R.id.textTotalWeeks);
+        TextView textTotalDayss = (TextView) findViewById(R.id.textTotalDays);
+        TextView textTotalHours = (TextView) findViewById(R.id.textTotalHours);
+        TextView textTotalMinutes = (TextView) findViewById(R.id.textTotalMinutes);
+        TextView textTotalSeconds = (TextView) findViewById(R.id.textTotalSeconds);
+        TextView howOldTextYears = (TextView) findViewById(R.id.howOldAmIYear);
+        TextView howOldTextMonths = (TextView) findViewById(R.id.howOldAmIMonth);
+        TextView howOldTextDate = (TextView) findViewById(R.id.howOldAmIDate);
+
+        textTotalYears.setText("          " + Year);
+        textTotalMonths.setText("          " + Month);
+        textTotalWeeks.setText("          " + week);
+        textTotalDayss.setText("          " + day);
+        textTotalHours.setText("          " + hour);
+        textTotalMinutes.setText("          " + min);
+        textTotalSeconds.setText("          " + sec);
+
+        howOldTextYears.setText("" + howOldYear);
+        howOldTextMonths.setText("" + howOldMonth);
+        howOldTextDate.setText("" + howOldDate);
     }
 }

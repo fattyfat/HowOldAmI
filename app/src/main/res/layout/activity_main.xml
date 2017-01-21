@@ -9,13 +9,13 @@
     tools:context="fatty.howoldami.MainActivity">
 
     <TextView
-        android:text="請輸入您的生日"
+        android:text="@string/inputBirth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/textView2"
+        android:id="@+id/inputBirth"
         android:textSize="28dp"
         android:gravity="center"
         android:background="@color/calenderColor" />
@@ -25,13 +25,13 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/inputBirth"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="10dp">
 
         <TextView
-            android:text="年"
+            android:text="@string/Year"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/yearTextView"
@@ -43,7 +43,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:text="月"
+            android:text="@string/Month"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/MonthTextView"
@@ -52,7 +52,7 @@
             android:gravity="center"/>
 
         <TextView
-            android:text="日"
+            android:text="@string/Day"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/DateTextView"
@@ -62,16 +62,38 @@
 
     </LinearLayout>
 
-    <Button
-        android:text="確定"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/enterButton"
-        android:textSize="36dp"
-        android:background="@color/buttonColor"
         android:layout_below="@+id/yearMonthDateTextFieldLinearLayout"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_weight="1"
+        android:id="@+id/ButtonLayout">
+
+        <Button
+            android:text="@string/normalEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/enterButton"
+            android:textSize="36dp"
+            android:background="@color/buttonColor"
+            android:layout_below="@+id/yearMonthDateTextFieldLinearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:focusable="false"/>
+    </LinearLayout>
+
+    <ImageView
+        ads:srcCompat="@drawable/bg3mao"
+        android:id="@+id/bg3mao"
+        android:layout_width="39dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/yearMonthDateTextFieldLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:foreground="@drawable/bg3mao" />
 
     <TableLayout
         android:layout_below="@+id/textFrameBottom"
@@ -223,7 +245,7 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/enterButton"
+        android:layout_below="@+id/ButtonLayout"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentRight="true"
@@ -245,7 +267,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:text="歲"
+            android:text="@string/outputYear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/howOldAmI"
@@ -273,7 +295,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:text="月"
+            android:text="@string/outputMonth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView26"
@@ -301,7 +323,7 @@
             android:layout_weight="1" />
 
         <TextView
-            android:text="日"
+            android:text="@string/outputDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView28"

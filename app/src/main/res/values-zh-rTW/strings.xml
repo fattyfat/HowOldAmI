@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">How Old Am I ?</string>
+    <string name="inputBirth">請輸入您的生日</string>
+    <string name="Year">年</string>
+    <string name="Month">月</string>
+    <string name="Day">日</string>
+    <string name="normalEnter">確定</string>
+    <string name="errorEnter">錯誤/輸入</string>
+    <string name="outputYear">歲</string>
+    <string name="outputMonth">月</string>
+    <string name="outputDay">日</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+</resources>

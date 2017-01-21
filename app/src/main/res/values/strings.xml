@@ -1,4 +1,15 @@
 <resources>
+
     <string name="app_name">How Old Am I ?</string>
+    <string name="inputBirth">Input your birthday please</string>
+    <string name="Year">Year</string>
+    <string name="Month">Month</string>
+    <string name="Day">Day</string>
+    <string name="normalEnter">Enter</string>
+    <string name="errorEnter">ERROR/Enter</string>
+    <string name="outputYear">Year</string>
+    <string name="outputMonth">Month</string>
+    <string name="outputDay">Day</string>
+
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 </resources>
