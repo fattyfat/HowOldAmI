@@ -110,7 +110,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Years"
+                android:text="@string/TotalYears"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView7"
@@ -133,7 +133,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Months"
+                android:text="@string/TotalMonths"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView9"
@@ -152,7 +152,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Weeks"
+                android:text="@string/TotalWeeks"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView10"
@@ -171,7 +171,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Days"
+                android:text="@string/TotalDays"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView12"
@@ -189,7 +189,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Hours"
+                android:text="@string/TotalHours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView13"
@@ -207,7 +207,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Minutes"
+                android:text="@string/TotalMinutes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView14"
@@ -225,7 +225,7 @@
             android:layout_height="match_parent" >
 
             <TextView
-                android:text="Total Seconds"
+                android:text="@string/TotalSeconds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/textView11"

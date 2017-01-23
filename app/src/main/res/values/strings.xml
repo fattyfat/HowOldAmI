@@ -11,5 +11,13 @@
     <string name="outputMonth">Month</string>
     <string name="outputDay">Day</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="TotalYears">Total Years</string>
+    <string name="TotalMonths">Total Months</string>
+    <string name="TotalWeeks">Total Weeks</string>
+    <string name="TotalDays">Total Days</string>
+    <string name="TotalHours">Total Hours</string>
+    <string name="TotalMinutes">Total Minutes</string>
+    <string name="TotalSeconds">Total Seconds</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-4893753791097882/8955049651</string>
 </resources>

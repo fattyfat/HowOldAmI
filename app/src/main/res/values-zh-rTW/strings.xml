@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">How Old Am I ?</string>
+    <string name="app_name">我幾歲?</string>
     <string name="inputBirth">請輸入您的生日</string>
     <string name="Year">年</string>
     <string name="Month">月</string>
     <string name="Day">日</string>
     <string name="normalEnter">確定</string>
-    <string name="errorEnter">錯誤/輸入</string>
+    <string name="errorEnter">逼機了/輸入</string>
     <string name="outputYear">歲</string>
     <string name="outputMonth">月</string>
     <string name="outputDay">日</string>
 
-    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="TotalYears">總共幾年</string>
+    <string name="TotalMonths">總共幾個月</string>
+    <string name="TotalWeeks">總共幾個禮拜</string>
+    <string name="TotalDays">總共幾天</string>
+    <string name="TotalHours">總共幾個小時</string>
+    <string name="TotalMinutes">總共幾分鐘</string>
+    <string name="TotalSeconds">總共幾秒</string>
+
+    <string name="banner_ad_unit_id">ca-app-pub-4893753791097882/8955049651</string>
 </resources>
