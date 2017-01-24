@@ -7,9 +7,9 @@
     <string name="Day">Day</string>
     <string name="normalEnter">Enter</string>
     <string name="errorEnter">ERROR/Enter</string>
-    <string name="outputYear">Year</string>
-    <string name="outputMonth">Month</string>
-    <string name="outputDay">Day</string>
+    <string name="outputYear">Y</string>
+    <string name="outputMonth">M</string>
+    <string name="outputDay">D</string>
 
     <string name="TotalYears">Total Years</string>
     <string name="TotalMonths">Total Months</string>
